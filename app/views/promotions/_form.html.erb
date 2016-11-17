@@ -1,0 +1,8 @@
+<div class="pull-right">
+<%= form_for Promotion.new, :url => url_for(:controller => 'promotions', :action => 'create', :method => :post)  do |f| %>
+  <div class="col-xs-8 text-right">
+      <%= f.text_field :value, class: 'form-control' %>
+      <%= f.button "Apply Coupon", class: 'btn btn-primary' %>
+  </div>
+  <% end %>
+</div>
