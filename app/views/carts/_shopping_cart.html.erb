@@ -15,20 +15,5 @@
     <% @order_items.each do |order_item| %>
         <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
     <% end %>
-        <div>
-          <%= render 'promotions/form' %>
-        </div>
         <%= link_to "Checkout", "/users/new", {class: "btn btn-primary"} %>
 <% end %>
-<br/><br/><br/>
-<strong>Following coupon can be applied</strong>
-<br/>
-<div class="row">
-  <div class="col-xs-6 col-xs-offset-3">
-      <ul style="list-style:none; ">
-        <% @promo.each do |promocode| %>
-        <li style="float:left"><h4><%= promocode.name %>&nbsp;</h4></li>
-      <% end %>
-    </ul>
-  </div>
-</div>
